@@ -16,9 +16,9 @@
   <widget class="QPushButton" name="buttonRegresar">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>330</y>
-     <width>75</width>
+     <x>290</x>
+     <y>340</y>
+     <width>191</width>
      <height>23</height>
     </rect>
    </property>
@@ -80,19 +80,6 @@
      <string>Estado</string>
     </property>
    </column>
-  </widget>
-  <widget class="QPushButton" name="buttonCargar">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>330</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cargar</string>
-   </property>
   </widget>
  </widget>
  <resources/>
