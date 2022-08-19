@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>10</x>
      <y>70</y>
      <width>47</width>
      <height>13</height>
@@ -29,7 +29,7 @@
   <widget class="QLineEdit" name="txtRuta">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>60</x>
      <y>70</y>
      <width>171</width>
      <height>20</height>
@@ -39,27 +39,40 @@
   <widget class="QPushButton" name="buttonSelect">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>120</y>
-     <width>75</width>
+     <x>250</x>
+     <y>70</y>
+     <width>101</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Seleccionar</string>
+    <string>Seleccionar ruta</string>
    </property>
   </widget>
   <widget class="QPushButton" name="buttonRegresar">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>120</y>
+     <x>180</x>
+     <y>130</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Regresar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonCargar">
+   <property name="geometry">
+    <rect>
+     <x>74</x>
+     <y>130</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cargar archivo</string>
    </property>
   </widget>
  </widget>
