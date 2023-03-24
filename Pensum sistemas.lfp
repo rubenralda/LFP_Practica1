@@ -1,0 +1,72 @@
+017,Social Humanística 1,,1,1,4,0
+101,Mate Básica 1,,1,1,7,0
+069,Técnica Complementaria 1,,1,1,3,0
+039,Deportes 1,,0,1,1,0
+348,Química General 1,,1,1,3,0
+0006,Idioma Técnico 1,,0,1,2,-1
+019,Social Humanística 2,017,1,2,4,0
+103,Mate Basica 2,101,1,2,7,0
+005,Tecnicas de estudio e investigación,,1,2,3,0
+147,Fisica Básica,101,1,2,5,0
+040,Deportes 2,039,0,2,1,-1
+0008,Idioma Técnico 2,0006,0,2,2,-1
+795,Lógica de Sistemas,103,1,3,2,0
+960,Mate computo 1,103,1,3,5,0
+770,Introducción a la programación 1,103,1,3,4,0
+0009,Idioma Técnico 3,0008,0,3,2,-1
+732,Estadística 1,107;005,1,4,5,0
+796,Lenguajes Formales,770;795;960,1,4,3,1
+962,Mate Computo 2,960;770;795,1,4,5,1
+771,Introducción a la programación 2,107;770;795;960,1,4,5,0
+010,Lógica,019,0,4,2,1
+112,Mate Intermedia 2,107,1,4,5,0
+114,Mate Intermedia 3,107,1,4,5,0
+152,Física 2,107;150,1,4,6,1
+0011,Idioma Técnico 4,0009,0,4,2,-1
+2025,Practica Inicial,103;770,1,4,0,1
+736,Analisis probabilístico,732,1,5,4,0
+777,Compiladores 1,771;796;962,1,5,4,-1
+964,Organización Computacional,152;771;962,1,5,3,-1
+772,Estructura de datos,771;796;962,1,5,5,-1
+116,Mate Aplicada 3,112;114,1,5,5,1
+118,Mate Aplicada 1,112;114,1,5,5,1
+601,Investigación de Operaciones 1,771;732,1,6,5,1
+014,Economía,732,1,6,4,0
+722,Teoría de Sistemas 1,732;772;116;118,1,6,5,-1
+781,Compiladores 2,777;772,1,6,5,-1
+778,Arq. de Compu y ensambladores 1,796;964,1,6,5,-1
+773,Implementación de Archivos,772;796,1,6,4,-1
+122,Mate Aplicada 4,118,0,6,4,-1
+120,Mate Aplicada 2,118,0,6,6,-1
+724,Teoria de Sistemas 2,722;601;736,1,7,5,-1
+603,Investigacion de Operaciones 2,601,1,7,5,-1
+734,Estadistica 2,732,0,7,5,-1
+281,Sistemas Operativos 1,781;778,1,7,5,-1
+779,Arq. de Compu y ensambladores,778,1,7,4,-1
+970,Redes de computadoras 1,773;778,1,7,4,-1
+774,Sistemas de bases de datos 1,773,1,7,5,-1
+656,Administración de empresas 1,,0,7,5,-1
+2036,Práctica intermedia,778;777;773;2025,1,7,0,-1
+285,Sistemas operativos 2,281,1,8,4,-1
+975,Redes de computadoras 2,970,1,8,4,-1
+775,Sistemas de bases de datos 2,281;774,1,8,4,-1
+283,Analisis y diseño de sistemas 1,774,1,8,5,-1
+797,Seminario de sistemas 1,724,1,8,3,-1
+729,Modelación y Simulación 1,724;603,1,9,5,-1
+786,Gerenciales 1,283;722,1,9,4,-1
+972,Inteligencia Artificial 1,781;775;724,1,9,4,-1
+966,auditoría de redes,975,0,9,4,-1
+785,Analisis y diseño de Sistemas 2,283,1,9,5,-1
+788,Sistemas aplicados 1,283,0,9,5,-1
+738,Bases de datos avanzados,775,0,9,4,-1
+798,Seminario de sistemas 2,797,1,9,3,-1
+787,Gerenciales 2,786,1,10,4,-1
+790,Negocios informaticos,786,0,10,4,-1
+720,Modelación y simulación 2,729,1,10,5,-1
+968,Inteligencia artificial 2,972,0,10,4,-1
+974,Redes de Nueva Generación,975,0,10,4,-1
+780,Software Avanzado,785,1,10,6,-1
+107,Mate Intermedia 1,103,1,3,10,0
+150,Física 1,103;147,1,3,6,0
+2009,Practica Final,2036,1,9,0,-1
+799,Seminario de Investigacion,798,1,10,3,-1

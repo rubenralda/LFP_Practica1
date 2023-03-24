@@ -1,26 +1,23 @@
-from operator import le
-from re import U
 from tkinter.messagebox import showerror, showinfo
-from PyQt5 import QtWidgets, uic, QtCore
+from PyQt5 import QtWidgets, uic
 from tkinter import *
 from tkinter import filedialog
-from PyQt5.QtWidgets import QMessageBox, QFileDialog
 
 
 app = QtWidgets.QApplication([])
 cursos=[]
 
 # Cargar Ventanas
-menuPrincipal = uic.loadUi("menuPrincipal.ui")
-cargarArchivo = uic.loadUi("cargarArchivo.ui")
-gestionCursos = uic.loadUi("gestionarCursosMenu.ui")
-conteoCreditos = uic.loadUi("conteoCreditos.ui")
+menuPrincipal = uic.loadUi("ui/menuPrincipal.ui")
+cargarArchivo = uic.loadUi("ui/cargarArchivo.ui")
+gestionCursos = uic.loadUi("ui/gestionarCursosMenu.ui")
+conteoCreditos = uic.loadUi("ui/conteoCreditos.ui")
 
-listaCursos=uic.loadUi("listaCursos.ui")
-buscarCurso=uic.loadUi("buscarCurso.ui")
-agregarCurso=uic.loadUi("agregarCurso.ui")
-editarCurso=uic.loadUi("editarCurso.ui")
-eliminarCurso=uic.loadUi("eliminarCurso.ui")
+listaCursos=uic.loadUi("ui/listaCursos.ui")
+buscarCurso=uic.loadUi("ui/buscarCurso.ui")
+agregarCurso=uic.loadUi("ui/agregarCurso.ui")
+editarCurso=uic.loadUi("ui/editarCurso.ui")
+eliminarCurso=uic.loadUi("ui/eliminarCurso.ui")
 
 # Funciones
 def botonCargarArchivo():
@@ -45,17 +42,18 @@ def buscarArchivo():
 def cargarFile():
     if cargarArchivo.txtRuta.text()!="":
         try:
-            file = open(cargarArchivo.txtRuta.text(),"r+")
+            file = open(cargarArchivo.txtRuta.text(),"r+",encoding="utf-8")
             cursos.clear()
             for linea in file:
                 cursos.append(linea.replace("\n","").split(","))
             file.close()
+            showinfo("Información","El archivo fue cargado con exito")
+            validar()
+            cargarArchivo.hide()
+            menuPrincipal.show()
         except:
             showerror("Error", "Error al cargar el archivo")  
-        showinfo("Información","El archivo fue cargado con exito")
-        validar()
-        cargarArchivo.hide()
-        menuPrincipal.show()
+        
     else:
         showerror("Error", "Ingrese una ruta")
 
@@ -144,6 +142,8 @@ def buttonAbrirEditar():
     gestionCursos.hide()
     editarCurso.show()
     editarCurso.buttonEditar.setEnabled(False)
+    editarCurso.buttonBuscar.setEnabled(True)
+    editarCurso.buttonRegresar.setEnabled(True)
 
 def buttonRegresarLista4():
     gestionCursos.show()
@@ -184,6 +184,7 @@ def buttonBuscar2():
                 editarCurso.txtEstado.setText(curso[6])
                 editarCurso.buttonEditar.setEnabled(True)
                 editarCurso.buttonRegresar.setEnabled(False)
+                editarCurso.buttonBuscar.setEnabled(False)
                 cursos.pop(i)
                 existe=True
                 break
@@ -200,6 +201,7 @@ def buttonEditar():
         showinfo("Información","El curso se ha editado exitosamente")
         editarCurso.buttonEditar.setEnabled(False)
         editarCurso.buttonRegresar.setEnabled(True)
+        editarCurso.buttonBuscar.setEnabled(True)
     else:
         showerror("Error", "Algunos campos son obligatorios")
 
@@ -265,11 +267,12 @@ def buttonContar2():
 def buttonRegresar3():
     menuPrincipal.show()
     conteoCreditos.hide()
-
+def salir():
+    exit()
 # Agregar Eventos
 
 menuPrincipal.buttonCargar.clicked.connect(botonCargarArchivo)
-menuPrincipal.buttonSalir.clicked.connect(exit)
+menuPrincipal.buttonSalir.clicked.connect(salir)
 menuPrincipal.buttonCursos.clicked.connect(buttonGesCursos)
 menuPrincipal.buttonCreditos.clicked.connect(buttonAbrirConteo)
 
